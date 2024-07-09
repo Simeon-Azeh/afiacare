@@ -11,7 +11,7 @@ function Header() {
     { name: "Services", link: "/" },
   ];
   return (
-    <div className="flex items-center justify-between p-5">
+    <div className="flex items-center justify-between py-0 px-10 fixed top-0 left-0 right-0 z-50 ">
       <div className="flex items-center justify-between gap-80">
         <img src={logo} className="w-[60px] md:w-[80px] object-cover" alt="" />
         <div className="hidden md:flex gap-8 ">
@@ -23,7 +23,7 @@ function Header() {
         {/* Mobile menu */}
         <div className="md:hidden" onClick={() => setToggle(!toggle)}>
           <HiBars3BottomRight
-            size={30} className="cursor-pointer absolute text-[#39827a] top-7 right-7"
+            size={30} className="cursor-pointer absolute text-[#39827a] top-4 right-7"
           />
           {toggle ? (
             <div className="absolute top-20 right-12 w-[80%]  bg-[#ffffff] p-5 border rounded-md">
