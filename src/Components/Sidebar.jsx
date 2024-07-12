@@ -48,7 +48,7 @@ function Sidebar({ children }) {
         </SidebarContext.Provider>
 
         <div className="border-t flex p-3 relative">
-          <img src={ProfileAvatar} className="w-10 h-10 rounded-full" alt="" />
+          <img src={ProfileAvatar} className="w-12 h-12 rounded-full" alt="" />
           <div
             className={`flex justify-between items-center ml-3 overflow-hidden transition-all ${expanded ? "w-52" : "w-0"}`}
           >
@@ -63,9 +63,9 @@ function Sidebar({ children }) {
           {actionsVisible && (
             <div className="absolute right-0 bottom-12 w-48 bg-white border rounded shadow-lg p-4">
               <ul className="text-gray-500 ">
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-2"><CgProfile /> View Profile</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-2"> <IoSettingsOutline /> Settings</li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-400 flex items-center gap-2"><AiOutlineLogin /> Log Out</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-x-2"><CgProfile /> View Profile</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b flex items-center gap-x-2"> <IoSettingsOutline /> Settings</li>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-400 flex items-center gap-x-2"><AiOutlineLogin /> Log Out</li>
               </ul>
             </div>
           )}
