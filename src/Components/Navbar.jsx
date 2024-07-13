@@ -38,17 +38,15 @@ function Navbar() {
 
   return (
     <div className="flex flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 py-4">
-       
-        <h1 className="text-lg hidden md:block font-semibold text-gray-500  text-left">
+      <h1 className="text-lg font-semibold text-gray-500">
         {greeting}, <span className="text-[#57bdb1] text-[22px]">Simeon!</span>
       </h1>
-
-      <div className="flex items-center gap-4 md:ml-auto">
+      <div className="flex items-center gap-4 ml-auto">
         <div className="relative">
           <input
             type="text"
             placeholder="Search..." className="p-2 pl-8 border rounded-lg text-sm bg-white text-gray-400 outline-none"
-            style={{ width: "220px" }}
+            style={{ width: "200px" }}
           />
           <FiSearch className="absolute left-3 top-3 text-gray-400" />
         </div>
