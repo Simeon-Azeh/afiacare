@@ -9,7 +9,7 @@ import ProfileAvatar from "./../assets/images/avatar.png";
 
 const SidebarContext = createContext();
 
-function Sidebar({ children }) {
+function AdminSidebar({ children }) {
   const [expanded, setExpanded] = useState(true);
   const [actionsVisible, setActionsVisible] = useState(false);
 
@@ -29,7 +29,7 @@ function Sidebar({ children }) {
   }, []);
 
   return (
-    <aside className={`h-screen  ${expanded ? "w-64" : "w-20"} transition-all`}>
+    <aside className={`h-screen ${expanded ? "w-64" : "w-20"} transition-all`}>
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
@@ -53,8 +53,8 @@ function Sidebar({ children }) {
             className={`flex justify-between items-center ml-3 overflow-hidden transition-all ${expanded ? "w-52" : "w-0"}`}
           >
             <div className="leading-5">
-              <h4 className="text-gray-500 font-semibold">John Doe</h4>
-              <span className="text-gray-400 text-xs">johndoe@gmail.com</span>
+              <h4 className="text-gray-500 font-semibold">Regional Hospital</h4>
+              <span className="text-gray-400 text-xs">Buea, SW</span>
             </div>
             <button onClick={() => setActionsVisible(!actionsVisible)}>
               <IoMdMore size={24} className="text-gray-400" />
@@ -102,4 +102,4 @@ export function SidebarItem({ icon, text, active, alert }) {
   );
 }
 
-export default Sidebar;
+export default AdminSidebar;

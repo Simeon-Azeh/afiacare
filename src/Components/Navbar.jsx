@@ -37,8 +37,8 @@ function Navbar() {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 py-4">
-      <h1 className="text-lg font-semibold text-gray-500">
+    <div className="flex bg-white flex-col-reverse md:flex-row justify-between items-center px-4 md:px-8 py-4">
+      <h1 className="text-lg hidden md:block font-semibold text-gray-500">
         {greeting}, <span className="text-[#57bdb1] text-[22px]">Simeon!</span>
       </h1>
       <div className="flex items-center gap-4 ml-auto">
@@ -69,11 +69,14 @@ function Navbar() {
           )}
         </div>
         <div className="relative">
+          
           <img
             src={AvatarImg}
-            alt="Avatar" className="w-10 h-10 rounded-full border border-white shadow-md cursor-pointer"
+            alt="Avatar" className="w-[40px] h-[40px]    md:w-10 md:h-10   rounded-full border border-white shadow-md cursor-pointer"
             onClick={toggleDropdown}
           />
+         
+        
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-60 p-2 bg-white border rounded-lg shadow-lg z-10">
                 <p className="text-gray-600 text-center font-medium ">You're in as a user</p>
@@ -90,7 +93,7 @@ function Navbar() {
                     <img src={FlagEN} alt="English" className="w-5 h-5" /> English
                   </button>
                   <button className="flex items-center gap-2 w-full text-gray-600 hover:bg-gray-100 p-2">
-                    <img src={FlagES} alt="Spanish" className="w-5 h-5" /> Español
+                    <img src={FlagES} alt="Spanish" className="w-5 h-5" /> French
                   </button>
                 </div>
               )}
